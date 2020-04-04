@@ -1,0 +1,25 @@
+body {
+    padding-top: 200px;
+    font-family: 'Oswald', sans-serif;
+}
+
+input, textarea {
+    margin: 0.25em 0 !important;
+    font-size: 20px !important;
+    min-height: 40px;
+    border-radius: 0 !important;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    padding: 5px 0;
+    color: white;
+    background: black;
+    font-size: 20px;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.85;
+}

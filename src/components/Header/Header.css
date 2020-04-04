@@ -1,0 +1,82 @@
+.header {
+  font: 14px 'Teko', 'Oswald';
+  position: fixed;
+  top: 0;
+  width: 80%;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 2.5%;
+  border-bottom: 7px solid black;
+  box-shadow: 0 25px 5px white;
+  background: white;
+  z-index: 2000;
+}
+
+.actions img {
+  cursor: pointer;
+  margin: 0 6px;
+  height: 40px;
+}
+
+.search {
+  font-family: 'Oswald';
+  border: none !important;
+  border-bottom: 3px solid black !important;
+}
+
+.header .search {
+  width: 200px;
+  height: 50px;
+  margin-top: 15px !important;
+  font-size: 30px !important;
+}
+
+.search:focus {
+  outline: none !important;
+}
+
+img:hover {
+  opacity: 0.85;
+}
+
+.header a {
+  color: black !important;
+}
+
+.header a:hover {
+  text-decoration: none !important;
+}
+
+.header [type="submit"] {
+  -webkit-appearance: none;
+}
+
+.header .settings {
+  position: fixed;
+  top: 93px;
+  right: 12.5%;
+  text-align: center;
+  padding: 15px 40px;
+  line-height: normal;
+  display: inline-block;
+  font-size: 40px;
+  border: 3px solid black;
+  border-top-width: 7px;
+  border-radius: 0 0 5px 5px;
+  transition: 0.2s;
+  background: whitesmoke;
+  z-index: 20000;
+}
+
+.header .selected {
+  color: #1e7e34;
+  font-weight: bold;
+}
+
+.header .unselected {
+  cursor: pointer;
+}
+
+.imgLogo{
+  width: 300px;
+}

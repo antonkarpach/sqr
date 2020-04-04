@@ -1,0 +1,20 @@
+.company-edit {
+    margin-left: 0 !important;
+}
+
+.company-edit>div {
+    border: 4px dashed black;
+    font-size: 20px;
+    padding: 25px;
+}
+
+.company-edit>textarea {
+    resize: none;
+    margin: 0 25px 0 0 !important;
+    border: 4px solid black;
+    padding: 25px;
+}
+
+.public-DraftEditor-content {
+    min-height: 400px !important;
+}

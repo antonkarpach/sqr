@@ -1,0 +1,9 @@
+.table-users td {
+    padding: 8px !important;
+}
+
+.table-users img {
+    height: 20px;
+    margin: 0 5px;
+    vertical-align: top;
+}

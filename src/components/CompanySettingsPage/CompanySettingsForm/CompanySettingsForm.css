@@ -1,0 +1,74 @@
+.form-company-settings input,
+.form-company-settings textarea {
+    border: 2px solid black !important;
+}
+
+.form-company-settings textarea {
+    min-height: 100px;
+}
+
+.form-company-settings [name=tag] {
+    width: 75% !important;
+}
+
+.form-company-settings [name=speciality] {
+    width: 75% !important;
+    cursor: default;
+    display: inline;
+    background: unset;
+}
+
+.form-company-settings [name=speciality]:focus {
+    box-shadow: none;
+}
+
+.form-company-settings .dropdown-menu {
+    overflow: auto;
+    cursor: default;
+    width: calc(75% - 2px);
+    max-height: 200px;
+    border: 1px solid black;
+    border-radius: 0;
+    margin: -1px 25% 0 0;
+}
+
+.form-company-settings .tag {
+    display: inline-block;
+    color: whitesmoke;
+    margin: 2px;
+    padding: 2px 10px;
+    background-color: slategray;
+    border-radius: 2px;
+}
+
+.form-company-settings .suggestions ul {
+    width: 300px;
+    list-style: none;
+    margin-top: -4px;
+    padding: 0;
+    position: absolute;
+    color: whitesmoke;
+    background-color: slategray;
+    opacity: 0.95;
+}
+
+.form-company-settings .activeSuggestion {
+    opacity: 0.75;
+}
+
+.form-company-settings .tag-input {
+    width: 100%;
+}
+
+.form-company-settings {
+    font-size: 20px;
+}
+
+.form-company-settings td {
+    width: 300px;
+}
+
+.form-company-settings td:first-child {
+    text-align: right;
+    padding-right: 15px;
+}

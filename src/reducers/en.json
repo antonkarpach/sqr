@@ -1,0 +1,103 @@
+{
+  "login": {
+    "authHelp": "Don't have an account? Sign in with social networks or try to registrate on a.karpach.",
+    "allFieldsRequired": "Fill in all the fields",
+    "loginRequired": "Input the login",
+    "passwordRequired": "Input the password",
+    "wrongPasswordRepeat": "Repeated password is wrong",
+    "entrance": "Log in",
+    "enter": "Sign in",
+    "registration": "Registration",
+    "register": "Sign up",
+    "login": "Login",
+    "password": "Password",
+    "passwordRepeat": "Repeat the password"
+  },
+  "admin": {
+    "confirmDeleting": "Remove user",
+    "login": "Login",
+    "createdAt": "Created",
+    "status": "Status",
+    "active": "active",
+    "blocked": "blocked"
+  },
+  "main": {
+    "noCompanies": "Тo companies.",
+    "firstCompany": "Your company will be first!",
+    "latest": "latest",
+    "popular": "popular"
+  },
+  "profile": {
+    "rights": "Rights: ",
+    "admin": "Admin",
+    "administration": "Administration",
+    "firstName": "FirstName: ",
+    "lastName": "LastName: ",
+    "sex": "Sex: ",
+    "aboutMe": "about me: ",
+    "numberOfCompanies": "companies: ",
+    "notSpecified": "not specified",
+    "sexOptions": ["male", "female"],
+    "createCompany": "Create the company",
+    "exit": "Exit",
+    "confirmDelete": "Delete the company",
+    "name": "Name",
+    "aboutCompany": "About",
+    "tags": "Tags",
+    "updatedAt": "Changed",
+    "rating": "Rating",
+    "noCompanies": "no companies"
+  },
+  "search": {
+    "search": "Search by company",
+    "chooseSpeciality": "Choose the category...",
+    "noResults": "Nothing found."
+  },
+  "tagInput": { "addTag": "input tag..." },
+  "companyEdit": { "save": "Save" },
+  "companyInfoBox": {
+    "aboutCompany": "About: ",
+    "tags": "Tags: ",
+    "rating": "Rating:"
+  },
+  "company": {
+    "yourRating": "Your rating:",
+    "comments": "Comments:",
+    "noComments": "No comments",
+    "comment": "comment..."
+  },
+  "companySettings": {
+    "companyNameRequired": "Enter the company name",
+    "specialityRequired": "Enter the companies speciality",
+    "editCompany": "Edit the company",
+    "newCompany": "New company",
+    "name":"Name",
+    "speciality": "Category",
+    "aboutCompanies": "About",
+    "tags": "Tags",
+    "save": "Save",
+    "create": "Create"
+  },
+  "specialities": [
+    "Design",
+    "Meal",
+    "Games",
+    "Art",
+    "Literature",
+    "Music",
+    "Science and education",
+    "Craft",
+    "Social projects",
+    "Sport",
+    "Theatre",
+    "Technology"
+  ],
+  "errors": [
+    "Sorry,an error has occurred",
+    "Authorisation Error. Sign in.",
+    "You cannot manage this company.",
+    "The company doesn't exist or it was deleted.",
+    "You do not have administrator rights",
+    "User doesn't exist or has been deleted."
+  ]
+}

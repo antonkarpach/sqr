@@ -1,0 +1,12 @@
+.comment {
+    width: 100%;
+    font-size: 22px;
+    margin: 5px;
+}
+
+.comment img {
+    vertical-align: middle;
+    display: inline;
+    float: right;
+    height: 20px;
+}
