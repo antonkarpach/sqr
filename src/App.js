@@ -7,6 +7,7 @@ import './components/style.css';
 import {connect} from 'react-redux';
 import {request} from './lib/request';
 import config from "./config";
+import Test from "./components/Test/Test";
 
 const App = (props) => {
   let getUser = () => {
@@ -25,6 +26,7 @@ const App = (props) => {
 
   return (
     <div className='d-flex justify-content-center'>
+      <Test/>
       <Header/>
       { props.children }
     </div>
