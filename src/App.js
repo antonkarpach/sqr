@@ -26,7 +26,7 @@ const App = (props) => {
 
   return (
     <div className='d-flex justify-content-center'>
-      <Test/>
+      {/*<Test/>*/}
       <Header/>
       { props.children }
     </div>
