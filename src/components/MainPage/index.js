@@ -5,7 +5,7 @@ import Switch from "react-switch";
 import CompanyInfoBox from '../CompanyInfoBox';
 import {request, onerror} from '../../lib/request';
 
-import './MainPage.css';
+import './MainPage.scss';
 
 class MainPage extends Component {
     constructor(props) {
@@ -51,7 +51,7 @@ class MainPage extends Component {
         if (!this.state.companies.length) return <span
             className={'w-100 mt-5 display-4 text-center'}>{this.lang.noCompanies}<br/>{this.lang.firstCompany}</span>;
         return (
-            <div className="w-75">
+            <div className="MainPage">
                 <div className={'col-9 text-center h2'}>
                     <span style={{
                         color: this.state.popular ? 'black' : '#006cd2',
@@ -79,11 +79,13 @@ class MainPage extends Component {
                         transition: '0.25s'
                     }}>{this.lang.popular}</span>
                 </div>
-                <div className={'Card__container'}>
-                    {this.state.companies.map(company =>
-                        <CompanyInfoBox company={company}/>
-                    )
-                    }
+                <div className="Cards">
+                    <div className={'Cards__container'}>
+                        {this.state.companies.map(company =>
+                            <CompanyInfoBox company={company}/>
+                        )
+                        }
+                    </div>
                 </div>
             </div>
         )

@@ -1,3 +1,38 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 65px;
+
+  &__search {
+    width: 100%;
+
+    &__line {
+
+      font-family: 'Oswald';
+      border: none !important;
+      border-bottom: 3px solid black !important;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    position: relative;
+
+    &__settings {
+      position: absolute;
+      top: 30px;
+    }
+  }
+
+  .ImageIcon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+
 .header {
   font: 14px 'Teko', 'Oswald';
   position: fixed;
