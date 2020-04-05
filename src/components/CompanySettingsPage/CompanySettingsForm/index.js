@@ -4,7 +4,7 @@ import { request, onerror } from '../../../lib/request';
 import TagInput from "../../TagInput";
 import connect from "react-redux/es/connect/connect";
 
-import('./CompanySettingsForm.css');
+import './CompanySettingsForm.css';
 
 class CompanySettingsForm extends Component {
   constructor(props) {

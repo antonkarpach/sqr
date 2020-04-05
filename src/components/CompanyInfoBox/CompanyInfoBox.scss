@@ -1,14 +1,34 @@
 .Card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     width: 300px;
-    background: url("../img/company-info-bg.png");
-    padding: 0.5rem 1rem;
-    box-shadow: 0 0 4px black;
+    min-width: 300px;
+    //background: url("../img/company-info-bg.png");
+    background-color: #1c3664;
+    padding: 0 1rem;
+    padding-bottom: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);;
+
+    &:hover {
+        background-color: #142646;
+        transition: color .1s;
+    }
 
     &__name {
+        display: flex;
+        justify-content: center;
+        width: 100%;
         color: white;
+        font-size: 2rem;
+        text-align: center;
+
+        & :hover {
+            color: #007bff;
+            text-decoration: none;
+            transition: color .2s;
+        }
     }
 
     &__type {
@@ -20,14 +40,18 @@
     }
 
     &__rangs {
+        display: flex;
         color: white;
+        max-width: 250px;
 
         &__name {
-
+        padding-right: 1rem;
         }
 
         &__stars {
-
+            img {
+                width: 25px;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import Star from '../src/components/icons/star/Star';
 
 // import './bower_components/bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -27,6 +28,7 @@ const App = (props) => {
   return (
     <div className='d-flex justify-content-center'>
       {/*<Test/>*/}
+      <Star color="red"/>
       <Header/>
       { props.children }
     </div>

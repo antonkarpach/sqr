@@ -12,8 +12,6 @@ class CompanyInfoBox extends Component {
         <span className={'Card__name'}><a href={`/companies/${company.id}`}>{company.name}</a></span>
         <span className={'Card__type'}>({this.props.store.lang.specialities[company.speciality]})</span>
         <span className={'Card__description'}>{this.lang.aboutCompany}{company.about}</span>
-        {/*<span className={'Card__tags'}>{this.lang.tags}{JSON.parse(company.tags).map(tag => <span*/}
-        {/*  className={'Card__tags'}>{tag.text}</span>)}</span>*/}
         <span className={'Card__rangs'}>
           <span className={'Card__rangs__name'}>{this.lang.rating}</span>
           <div className={'Card__rangs__stars'}>
