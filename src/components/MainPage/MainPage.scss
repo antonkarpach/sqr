@@ -1,0 +1,14 @@
+.Card {
+ display: flex;
+ justify-content: center;
+
+ .Cards__container {
+     width: 1140px;
+     padding: 0 70px;
+     display: flex;
+     justify-content: flex-start;
+     flex-wrap: wrap;
+     margin: 0 65px;
+ }
+}
+

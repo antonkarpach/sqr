@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import './App.scss';
 
 // import './bower_components/bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -7,6 +8,7 @@ import './components/style.css';
 import {connect} from 'react-redux';
 import {request} from './lib/request';
 import config from "./config";
+import Test from "./components/Test/Test";
 
 const App = (props) => {
   let getUser = () => {
@@ -24,7 +26,8 @@ const App = (props) => {
   window.socket.on('update user', () => getUser());
 
   return (
-    <div className='d-flex justify-content-center'>
+    <div className='App'>
+      {/*<Test/>*/}
       <Header/>
       { props.children }
     </div>
