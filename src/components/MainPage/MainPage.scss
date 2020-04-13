@@ -1,4 +1,4 @@
-.Card {
+.Cards {
  display: flex;
  justify-content: center;
 
@@ -12,3 +12,14 @@
  }
 }
 
+@media screen and (min-width: 360px) {
+  .Cards__container {
+    width: 360px;
+    background-color: red;
+    padding: 0 70px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 65px;
+  }
+}

@@ -1,0 +1,18 @@
+@import "src/components/emum/variables";
+
+.HorizontalMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+  color: white;
+  height: 60px;
+
+
+}
+
+.oleg {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

@@ -9,6 +9,8 @@ import {connect} from 'react-redux';
 import {request} from './lib/request';
 import config from "./config";
 import Test from "./components/Test/Test";
+import HorizontalMenu from "./components/horizontal-menu/HorizontalMenu";
+import Footer from "./components/footer/Footer";
 
 const App = (props) => {
   let getUser = () => {
@@ -29,7 +31,11 @@ const App = (props) => {
     <div className='App'>
       {/*<Test/>*/}
       <Header/>
-      { props.children }
+      <HorizontalMenu/>
+      <div className="Content">
+        { props.children }
+      </div>
+      <Footer/>
     </div>
   );
 };

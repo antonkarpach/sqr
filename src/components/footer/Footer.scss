@@ -1,0 +1,24 @@
+@import "src/components/emum/variables";
+
+.Footer {
+  background-color: $color-primary;
+  height: 257px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    //background-color: red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: $xl;
+
+    .Divider {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border-top: 1px solid #ced4da;
+      opacity: 0.2;
+    }
+  }
+}

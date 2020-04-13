@@ -1,0 +1,223 @@
+//// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) { ... }
+//
+//// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) { ... }
+//
+//// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+//
+//// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: 1200px) { ... }
+
+@mixin horizontal-margin($value) {
+  margin-right: $value;
+  margin-left: $value;
+}
+
+@mixin vertical-margin($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin horizontal-padding($value) {
+  padding-right: $value;
+  padding-left: $value;
+}
+
+@mixin vertical-padding($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin external-indent($property: padding, $divider: 1) {
+  @include media-breakpoint-only(xl) {
+    #{$property}: $external-indent-xl / $divider;
+  }
+
+  @include media-breakpoint-only(lg) {
+    #{$property}: $external-indent-lg / $divider;
+  }
+
+  @include media-breakpoint-only(md) {
+    #{$property}: $external-indent-md / $divider;
+  }
+
+  @include media-breakpoint-only(sm) {
+    #{$property}: $external-indent-sm / $divider;
+  }
+
+  @include media-breakpoint-only(xs) {
+    #{$property}: $external-indent-xs / $divider;
+  }
+}
+
+@mixin external-vertical-indent($divider: 1) {
+  @include external-indent(padding-top, $divider);
+  @include external-indent(padding-bottom, $divider);
+}
+
+@mixin internal-indent($property: margin, $divider: 1) {
+  @include media-breakpoint-only(xl) {
+    #{$property}: $internal-indent-xl / $divider;
+  }
+
+  @include media-breakpoint-only(lg) {
+    #{$property}: $internal-indent-lg / $divider;
+  }
+
+  @include media-breakpoint-only(md) {
+    #{$property}: $internal-indent-md / $divider;
+  }
+
+  @include media-breakpoint-only(sm) {
+    #{$property}: $internal-indent-sm / $divider;
+  }
+
+  @include media-breakpoint-only(xs) {
+    #{$property}: $internal-indent-xs / $divider;
+  }
+}
+
+@mixin internal-vertical-indent($property: margin, $divider: 1) {
+  @include internal-indent(#{$property}-top, $divider);
+  @include internal-indent(#{$property}-bottom, $divider);
+}
+
+@mixin internal-indent-top($divider: 1) {
+  @include internal-indent(margin-top, $divider);
+}
+
+@mixin make-grid($row-class, $col-class, $gutter: $gutter-md) {
+  @include make-container($gutter);
+
+  padding: 0;
+
+  .#{$row-class} {
+    @include make-row($gutter);
+
+    margin: (-$gutter) 0 0 (-$gutter);
+  }
+
+  .#{$row-class} > .#{$col-class} {
+    @include make-col-ready($gutter);
+
+    padding: $gutter 0 0 $gutter;
+  }
+}
+
+@mixin hover {
+  @media not all and (hover: none), (-ms-high-contrast: none) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin narrowed-centered-block($width) {
+  @include horizontal-margin(auto);
+
+  max-width: $width;
+}
+
+@mixin colorSchemeHover($el: &, $property: color) {
+  &#{$el}--primary {
+    @include hover {
+      cursor: pointer;
+      #{$property}: $color-primary-light;
+    }
+  }
+}
+
+@mixin colorScheme($el: &, $property: color) {
+  &#{$el}--primary {
+    #{$property}: $color-primary;
+  }
+
+  &#{$el}--success {
+    #{$property}: $color-success;
+  }
+
+  &#{$el}--danger {
+    #{$property}: $color-danger;
+  }
+
+  &#{$el}--attention {
+    #{$property}: $color-attention;
+  }
+}
+
+@mixin margin-between($value, $property: margin-right) {
+  &:not(:last-child) {
+    #{$property}: $value;
+  }
+}
+
+@mixin margin-between-children($value, $property: margin-right, $selector: '> *') {
+  #{$selector} {
+    @include margin-between($value, $property);
+  }
+}
+
+@mixin link-hover {
+  text-decoration: $link-hover-decoration;
+  color: $link-hover-color;
+  cursor: pointer;
+}
+
+@mixin link() {
+  color: $link-color;
+
+  @include hover() {
+    @include link-hover();
+  }
+}
+
+@mixin reset-button {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  line-height: normal;
+  color: inherit;
+  background: transparent;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+@mixin indented-border($indentSize: $gutter-md, $borderColor: $color-gray-400, $direction: top) {
+  margin-#{$direction}: $indentSize;
+  padding-#{$direction}: $indentSize;
+  border-#{$direction}: 1px solid $borderColor;
+}
+
+// Copied from bootstrap mixin form-control-focus due to original mixin uses :focus
+@mixin form-control-focus-styles {
+  border-color: $input-focus-border-color;
+  color: $input-focus-color;
+  background-color: $input-focus-bg;
+  outline: 0;
+  // Avoid using mixin so we can pass custom focus shadow properly
+  @if $enable-shadows {
+    box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    /* stylelint-disable-next-line */
+  } @else {
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+
+@mixin font-size($el: &, $pseudo: '') {
+  &#{$el}--sm#{$pseudo} {
+    font-size: $font-size-sm;
+  }
+
+  &#{$el}--md#{$pseudo} {
+    font-size: $font-size-md;
+  }
+
+  &#{$el}--lg#{$pseudo} {
+    font-size: $font-size-lg;
+  }
+}

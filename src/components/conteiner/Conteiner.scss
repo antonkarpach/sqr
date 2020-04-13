@@ -1,0 +1,21 @@
+@import "src/components/emum/variables";
+
+.Container {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: $xl;
+    padding: 0 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 65px;
+  }
+  @media screen and (max-width: 1265px) {
+    &__container {
+      justify-content: center;
+    }
+  }
+}

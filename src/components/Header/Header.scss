@@ -1,117 +1,259 @@
-.Header {
+@import "src/components/emum/variables";
+
+.Header__container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 16px 65px;
+  justify-content: center;
 
-  &__search {
+  .Header {
     width: 100%;
-
-    &__line {
-
-      font-family: 'Oswald';
-      border: none !important;
-      border-bottom: 3px solid black !important;
-    }
-  }
-
-  &__actions {
     display: flex;
-    position: relative;
+    height: 92px;
+    width: $xl;
+    padding: 0 2rem;
 
-    &__settings {
-      position: absolute;
-      top: 30px;
+    @media (min-width: $lg) {
+      //background-color: green;
+      .logoImg2{
+        display: none;
+      }
+    }
+
+    @media (max-width: $lg) {
+      //background-color: yellow;
+      .logoImg2{
+        display: none;
+      }
+    }
+
+    @media (max-width: $md) {
+      //background-color: orange;
+      .logoImg1{
+        display: none;
+      }
+      .logoImg2{
+        display: unset;
+        img {
+          width: 80px;
+          height: 48px;
+        }
+      }
+    }
+
+    @media (max-width: $sm) {
+      //background-color: red;
+      .logoImg1{
+        display: none;
+      }
+      &__block {
+        &__search {
+          .Input {
+            display: none;
+            transition: 5s;
+          }
+        }
+      }
+    }
+
+    &__logo {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        width: 240px;
+        height: 60px;
+      }
+    }
+
+    &__block {
+      flex-grow: 11;
+      display: flex;
+      align-items: center;
+
+      &__search {
+        flex-grow: 11;
+        display: flex;
+        height: 40px;
+        justify-content: flex-end;
+
+        .ImageIcon {
+          flex-grow: 1;
+        }
+
+        .Input {
+          flex-grow: 12;
+          font-family: 'Oswald';
+          margin: unset !important;
+          border: none !important;
+          border-bottom: 1px solid #e9ecef !important;
+        }
+
+      }
+
+      &__actions {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+
+
+        &__settings {
+
+        }
+
+      }
+    }
+
+    .ImageIcon {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0 8px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .Settings {
+      color: $color-primary;
+      top: 62px;
+      font-size: 20px;
+      cursor: pointer;
+
+      .selected {
+        color: $color-danger;
+        font-weight: bold;
+      }
+
     }
   }
+}
 
-  .ImageIcon {
-    width: 30px;
-    height: 30px;
-  }
+.cn {
+  font-size: 15px;
 }
 
 
+//.Header {
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//  margin: 16px 65px;
+//
+//  &__menu {
+//    display: flex;
+//    flex-direction: row;
+//  }
+//
+//  &__search {
+//    width: 100%;
+//
+//    &__line {
+//      width: 90%;
+//      font-family: 'Oswald';
+//      border: none !important;
+//      border-bottom: 3px solid black !important;
+//    }
+//  }
+//
+//  &__actions {
+//    display: flex;
+//    position: relative;
+//
+//    &__settings {
+//      position: absolute;
+//      top: 30px;
+//    }
+//  }
+//
+//  .ImageIcon {
+//    width: 30px;
+//    height: 30px;
+//  }
+//}
 
-.header {
-  font: 14px 'Teko', 'Oswald';
-  position: fixed;
-  top: 0;
-  width: 80%;
-  height: 100px;
-  line-height: 100px;
-  padding: 0 2.5%;
-  border-bottom: 7px solid black;
-  box-shadow: 0 25px 5px white;
-  background: white;
-  z-index: 2000;
-}
 
-.actions img {
-  cursor: pointer;
-  margin: 0 6px;
-  height: 40px;
-}
-
-.search {
-  font-family: 'Oswald';
-  border: none !important;
-  border-bottom: 3px solid black !important;
-}
-
-.header .search {
-  width: 200px;
-  height: 50px;
-  margin-top: 15px !important;
-  font-size: 30px !important;
-}
-
-.search:focus {
-  outline: none !important;
-}
-
-img:hover {
-  opacity: 0.85;
-}
-
-.header a {
-  color: black !important;
-}
-
-.header a:hover {
-  text-decoration: none !important;
-}
-
-.header [type="submit"] {
-  -webkit-appearance: none;
-}
-
-.header .settings {
-  position: fixed;
-  top: 93px;
-  right: 12.5%;
-  text-align: center;
-  padding: 15px 40px;
-  line-height: normal;
-  display: inline-block;
-  font-size: 40px;
-  border: 3px solid black;
-  border-top-width: 7px;
-  border-radius: 0 0 5px 5px;
-  transition: 0.2s;
-  background: whitesmoke;
-  z-index: 20000;
-}
-
-.header .selected {
-  color: #1e7e34;
-  font-weight: bold;
-}
-
-.header .unselected {
-  cursor: pointer;
-}
-
-.imgLogo{
-  width: 300px;
-}
+//.header {
+//  font: 14px 'Teko', 'Oswald';
+//  position: fixed;
+//  top: 0;
+//  width: 80%;
+//  height: 100px;
+//  line-height: 100px;
+//  padding: 0 2.5%;
+//  border-bottom: 7px solid black;
+//  box-shadow: 0 25px 5px white;
+//  background: white;
+//  z-index: 2000;
+//}
+//
+//.actions img {
+//  cursor: pointer;
+//  margin: 0 6px;
+//  height: 40px;
+//}
+//
+//.search {
+//  font-family: 'Oswald';
+//  border: none !important;
+//  border-bottom: 3px solid black !important;
+//}
+//
+//.header .search {
+//  width: 200px;
+//  height: 50px;
+//  margin-top: 15px !important;
+//  font-size: 30px !important;
+//}
+//
+//.search:focus {
+//  outline: none !important;
+//}
+//
+//img:hover {
+//  opacity: 0.85;
+//}
+//
+//.header a {
+//  color: black !important;
+//}
+//
+//.header a:hover {
+//  text-decoration: none !important;
+//}
+//
+//.header [type="submit"] {
+//  -webkit-appearance: none;
+//}
+//
+//.header .settings {
+//  position: fixed;
+//  top: 93px;
+//  right: 12.5%;
+//  text-align: center;
+//  padding: 15px 40px;
+//  line-height: normal;
+//  display: inline-block;
+//  font-size: 40px;
+//  border: 3px solid black;
+//  border-top-width: 7px;
+//  border-radius: 0 0 5px 5px;
+//  transition: 0.2s;
+//  background: whitesmoke;
+//  z-index: 20000;
+//}
+//
+//.header .selected {
+//  color: #1e7e34;
+//  font-weight: bold;
+//}
+//
+//.header .unselected {
+//  cursor: pointer;
+//}
+//
+//.imgLogo {
+//  width: 240px;
+//}
