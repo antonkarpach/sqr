@@ -16,7 +16,7 @@ class CompanyInfoBox extends Component {
           <span className={'Card__rangs__name'}>{this.lang.rating}</span>
           <div className={'Card__rangs__stars'}>
             {[1, 2, 3, 4, 5].map(i =>
-              <img key={i} src={require(i <= company.rating ? '../img/star.png' : '../img/star3.png')}/>)}
+              <img key={i} src={require(i <= company.rating ? '../img/any/star.svg' : '../img/any/star-regular.svg')}/>)}
           </div>
         </span>
       </div>

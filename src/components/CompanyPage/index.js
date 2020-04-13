@@ -73,7 +73,7 @@ class CompanyPage extends Component {
           <div className={'company-content'} dangerouslySetInnerHTML={{ __html: this.state.company.text || '' }}/>
           { this.props.store.user.guest || <div className={'text-right mt-4'} onClick={this.onRate.bind(this)}>
             <span className={'align-middle'}>{this.lang.yourRating}</span>
-            {this.state.company && [1,2,3,4,5].map(i => <img key={i} data-rate={i} src={require('../img/star.png')}
+            {this.state.company && [1,2,3,4,5].map(i => <img key={i} data-rate={i} src={require('../img/any/star.svg')}
                                                              style={{ opacity: i <= JSON.parse(this.state.company.ratings)[this.props.store.user.id] ? 1 : 0.25}}/>)}
           </div>}
         </div>
