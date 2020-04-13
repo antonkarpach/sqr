@@ -5,11 +5,11 @@ import {request, onerror} from '../../lib/request';
 
 import './Header.scss';
 
-import logoImg1 from '../img/logo-header-blue.png';
-import logoImg2 from '../img/logo-header-blue-short.png';
+import logoImg2 from '../img/logo-header-blue-short.svg';
+import logoImg1 from '../img/logo-header-blue.svg'
 
-import userIcon from '../img/avatar_sm.png';
-import doorIcon from '../img/door.png';
+import userIcon from '../img/any/user.svg';
+import doorIcon from '../img/any/sign-out-alt-solid.svg';
 import {browserHistory} from "react-router";
 
 class Header extends Component {
@@ -50,7 +50,7 @@ class Header extends Component {
           <div className="Header__block">
             <form action='/search' className="Header__block__search">
               <div className="ImageIcon">
-                <img src={require("../img/search.png")}
+                <img src={require("../img/any/search-solid.svg")}
                      onClick={() => document.forms[0].submit()}/>
               </div>
               <input name={'query'} className="Input"/>
@@ -71,7 +71,7 @@ class Header extends Component {
                         className={this.props.store.user && this.props.store.user.lang === 2 ? 'selected' : 'unselected'}> 中文</span>
                 </div>}
                 <div className="ImageIcon">
-                  <img src={require("../img/settings2.png")}
+                  <img src={require("../img/any/settings.svg")}
                        onClick={() => this.state.settingsOpened || this.setState({settingsOpened: true})}/>
                 </div>
               </div>

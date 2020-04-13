@@ -1,7 +1,7 @@
 {
   "mysql": {
     "username": "root",
-    "password": "root",
+    "password": "",
     "database": "itransition",
     "dialect": "mysql",
     "pool": {
