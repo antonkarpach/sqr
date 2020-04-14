@@ -1,7 +1,18 @@
+@import "src/components/emum/variables";
+body {
+  color: $color-primary;
+}
 .Content {
   min-height: 600px;
+  position: relative;
+  top: 152px;
 }
 
+.Head__header {
+  position: fixed;
+  width: 100%;
+  z-index: 152;
+}
 
 .App {
   text-align: center;

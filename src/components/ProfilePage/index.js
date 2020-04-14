@@ -6,7 +6,7 @@ import { request, onerror } from '../../lib/request';
 import CompaniesTable from './CompaniesTable';
 import UserInfoBox from './UserInfoBox';
 
-import './ProfilePage.css';
+import './ProfilePage.scss';
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -42,9 +42,11 @@ class ProfilePage extends Component {
     if(!user) return null;
     if(!this.state.companies) return null;
     return (
-      <div className="row w-75">
-        <UserInfoBox user={user} numberOfCompanies={this.state.companies.length}/>
-        <CompaniesTable companies={this.state.companies} getCompanies={this.getCompanies.bind(this)} user={user}/>
+      <div className="ProfilePage">
+        <div className="ProfilePage__container">
+          <UserInfoBox user={user} numberOfCompanies={this.state.companies.length}/>
+          {/*<CompaniesTable companies={this.state.companies} getCompanies={this.getCompanies.bind(this)} user={user}/>*/}
+        </div>
       </div>
     )
   }

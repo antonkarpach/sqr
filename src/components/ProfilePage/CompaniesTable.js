@@ -37,13 +37,12 @@ class CompaniesTable extends Component {
   render = () => {
     this.lang = this.props.store.lang.profile;
     return (
-      <div className="col-9">
-        <table className="table table-companies table-striped table-borderless text-center text-light bg-dark w-100">
-          <thead style={{background: 'black'}} onClick={this.sort}>
+      <div className="CompaniesTable">
+        <table className="content">
+          <thead style={{background: '#1c3664'}} onClick={this.sort}>
             <td/>
             <td className={'sort'} data-sortBy="name">{this.lang.name}</td>
             <td>{this.lang.aboutCompany}</td>
-            <td>{this.lang.tags}</td>
             <td className={'cell-sm sort'} data-sortBy="updatedAt">{this.lang.updatedAt}</td>
             <td className={'cell-sm sort'} data-sortBy="rating">{this.lang.rating}</td>
           </thead>
@@ -53,7 +52,7 @@ class CompaniesTable extends Component {
             let date = new Date(Date.parse(company.updatedAt));
             return (
               <tr>
-                <td className={'align-bottom'}>
+                <td className="Settings">
                   <a href={`/companies/${company.id}/settings${this.props.user.isOwner ? `` : `?${this.props.user.id}` }`}><img src={settingsIcon}/></a>
                   <a href={`/companies/${company.id}/edit${this.props.user.isOwner ? `` : `?${this.props.user.id}` }`}><img src={editIcon}/></a>
                   <img src={deleteIcon} onClick={this.deleteCompany.bind(this, company)}/>
@@ -64,12 +63,11 @@ class CompaniesTable extends Component {
                   <span className={'text-success text-truncate'}>({this.props.store.lang.specialities[company.speciality]})</span>
                 </td>
                 <td className={'align-middle'}>{company.about}</td>
-                <td className={'align-middle'}>{JSON.parse(company.tags).map(tag => <span key={tag} className={'tag'}>{tag.text}</span>)}</td>
                 <td className={'cell-sm align-middle'}>{date.getDate()}.{date.getMonth()+1}.{date.getFullYear()}</td>
                 <td className={'cell-sm align-middle'}>{company.rating}</td>
               </tr>
             )}) }
-          { this.table.length ? null : <tr><td colSpan="6">{this.lang.noCompanies}</td></tr> }
+          { this.table.length ? null : <tr><td colSpan="5">{this.lang.noCompanies}</td></tr> }
           </tbody>
         </table>
       </div>

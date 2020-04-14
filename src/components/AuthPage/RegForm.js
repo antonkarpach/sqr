@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {browserHistory} from "react-router";
 import { request, onerror } from '../../lib/request';
 import connect from "react-redux/es/connect/connect";
+import './RegForm.scss';
 
 class RegForm extends Component {
   lang = this.props.store.lang.login;
@@ -26,15 +27,23 @@ class RegForm extends Component {
   render = () => {
     this.lang = this.props.store.lang.login;
     return (
-      <form onSubmit={this.submit} ref={f => this.form = f}>
-        <h1>{this.lang.registration}</h1>
-        <input type="email" name="email" className="form-control" placeholder="Email"/>
-        <input name="username" className="form-control" placeholder={this.lang.login}/>
-        <input type="password" name="password" className="form-control" placeholder={this.lang.password}/>
-        <input type="password" name="passwordRepeat" className="form-control" placeholder={this.lang.passwordRepeat}/>
-        <button type="submit">{this.lang.register}</button>
-        <h5 className="text-danger" ref={m => this.message = m}/>
-      </form>
+      <div className="RegForm">
+        <div className="RegForm__container">
+          <h1 className="header" >{this.lang.registration}</h1>
+          <form onSubmit={this.submit} ref={f => this.form = f}>
+            <div className="RegForm__container__email">Email</div>
+            <input type="email" name="email" className="RegForm__containerInp"/>
+            <div className="RegForm__container__login">{this.lang.login}</div>
+            <input name="username" className="RegForm__containerInp"/>
+            <div className="RegForm__container__Password">{this.lang.password}</div>
+            <input type="password" name="password" className="RegForm__containerInp"/>
+            <div className="RegForm__container__Password">{this.lang.passwordRepeat}</div>
+            <input type="password" name="passwordRepeat" className="RegForm__containerInp"/>
+            <button type="submit">{this.lang.register}</button>
+            <h5 className="text-danger" ref={m => this.message = m}/>
+          </form>
+        </div>
+      </div>
     );
   }
 }

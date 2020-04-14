@@ -1,16 +1,17 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import {Route, IndexRoute} from 'react-router';
 
 import App from './App';
 import MainPage from './components/MainPage';
 import AdminPage from './components/AdminPage';
-import AuthPage from './components/AuthPage';
+import AuthPage from './components/AuthPage/Auth';
 import ProfilePage from './components/ProfilePage';
 import SearchPage from './components/SearchPage';
 import CompanyNewPage from './components/CompanySettingsPage/new';
 import CompanyPage from './components/CompanyPage';
 import CompanyEditPage from './components/CompanyEditPage';
 import CompanySettingsPage from './components/CompanySettingsPage/existing';
+import RegForm from './components/AuthPage/Registration';
 
 import ErrorPage from './components/ErrorPage';
 
@@ -19,6 +20,7 @@ export default (
     <IndexRoute component={MainPage}/>
     <Route exact path={'/admin'} component={AdminPage}/>
     <Route exact path={'/login'} component={AuthPage}/>
+    <Route exact path={'/registration'} component={RegForm}/>
     <Route exact path={'/profile'} component={ProfilePage}/>
     <Route exact path={'/users/:userId'} component={ProfilePage}/>
     <Route exact path={'/search'} component={SearchPage}/>

@@ -34,16 +34,28 @@ class AuthForm extends Component {
   render = () => {
     this.lang = this.props.store.lang.login;
     return (
-      <form onSubmit={this.submit} ref={f => this.form = f} className={'form-auth'}>
-        <h1>{this.lang.entrance}</h1>
-        <input name="username" className="form-control" placeholder={this.lang.login}/>
-        <input type="password" name="password" className="form-control" placeholder={this.lang.password}/>
-        <table className="w-100">
-          <td><button type="submit">{this.lang.enter}</button></td>
-          <td width="40"><img src={require('../img/vk.png')} onClick={this.authVK} height="40"/></td>
-          <td width="40"><img src={require('../img/facebook.png')} onClick={this.authFB} height="40"/></td>
-        </table>
-        <h5 className="text-danger" ref={m => this.message = m}/>
+      <form onSubmit={this.submit} ref={f => this.form = f} className="AuthForm">
+        <h1 className="header">{this.lang.entrance}</h1>
+        <div className="AuthForm__container">
+          <div className="AuthForm__username">Имя</div>
+          <input name="username" className="AuthForm__usernameInput" placeholder={this.lang.login}/>
+          <div className="AuthForm__password">Пароль</div>
+          <input type="password" name="password" className="AuthForm__passwordInput" placeholder={this.lang.password}/>
+          <div className="AuthButtons">
+            <button type="submit">{this.lang.enter}</button>
+            <div className="anotherBn1">
+              <img src={require('../img/any/vk-brands.svg')} onClick={this.authVK} height="40"/>
+            </div>
+            <div className="anotherBn2">
+              <img src={require('../img/any/facebook-white.svg')} onClick={this.authFB} height="40"/>
+            </div>
+          </div>
+          <h5 className="text-danger" ref={m => this.message = m}/>
+          <h5 className="">{this.props.store.lang.login.authHelp}</h5>
+          <div className="regCont">
+            <a className="regBtn" href="/registration" >Регистрация</a>
+          </div>
+        </div>
       </form>
     );
   }

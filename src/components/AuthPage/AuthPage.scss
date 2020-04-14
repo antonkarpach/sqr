@@ -1,0 +1,147 @@
+@import "src/components/emum/variables";
+
+.AuthPage {
+  color: $color-primary;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .header {
+    line-height: 36px;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .regCont {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #1c3664;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+      background-color: #142646;
+
+    }
+    .regBtn:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .AuthButtons {
+    display: flex;
+    width: 100%;
+    padding-top: 21px;
+    padding-bottom: 1rem;
+
+    button {
+      background-color: #1c3664;
+      height: 40px;
+      border: 1px solid transparent;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .anotherBn1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1c3664;
+      height: 40px;
+      width: 40px;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      padding: 0 4px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .anotherBn2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1c3664;
+      height: 40px;
+      width: 40px;
+      border-radius: 0 5px 5px 0;
+      padding: 0 4px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .AuthForm {
+    width: $xl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__container {
+      padding-top: 1rem;
+      width: 370px;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+    }
+
+    &__usernameInput {
+      padding-top: 1rem;
+    }
+
+    &__password {
+      padding-top: 1rem;
+    }
+
+    &__passwordInput {
+      padding-top: 1rem;
+    }
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px) !important;
+    padding: 0.375rem 0.75rem !important;
+    font-weight: 300 !important;
+    line-height: 1.5 !important;
+    color: #1c3664 !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.25rem !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  }
+}
+
+
+img {
+  cursor: pointer;
+}
+
+.form-auth img {
+  margin-top: -9px;
+}
+
+img:hover {
+  opacity: 0.85;
+}
+
+a {
+  color: unset;
+}

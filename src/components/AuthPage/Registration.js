@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import {browserHistory} from "react-router";
 import {connect} from "react-redux";
 
-import AuthForm from './AuthForm';
 import RegForm from './RegForm';
 
-import './AuthPage.css';
+import './AuthPage.scss';
 
-class AuthPage extends Component {
+class RegPage extends Component {
   render = () => {
     let user = this.props.store.user;
     if(!user) return null;
@@ -16,13 +15,11 @@ class AuthPage extends Component {
       return null;
     }
     return (
-      <div className="text-center col-3">
-        <AuthForm/>
-        <h5 className="mt-3 mb-2 text-left">{this.props.store.lang.login.authHelp}</h5>
+      <div className="AuthPage">
         <RegForm/>
       </div>
     );
   }
 }
 
-export default connect(store => ({ store }), null)(AuthPage);
+export default connect(store => ({ store }), null)(RegPage);

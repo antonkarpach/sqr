@@ -1,4 +1,6 @@
 $color-primary: #1c3664;
+$color-primary-light: lighten($color-primary, 20%);
+$color-primary-lightest: lighten($color-primary, 70%);
 $color-danger: #dc3545;
 $color-attention: #fd7e14;
 $sm: 575.98px;

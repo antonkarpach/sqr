@@ -30,8 +30,10 @@ const App = (props) => {
   return (
     <div className='App'>
       {/*<Test/>*/}
-      <Header/>
-      <HorizontalMenu/>
+      <div className="Head__header">
+        <Header/>
+        <HorizontalMenu/>
+      </div>
       <div className="Content">
         { props.children }
       </div>

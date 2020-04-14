@@ -1,0 +1,62 @@
+@import "src/components/emum/variables";
+
+.UserInfoBox {
+  display: flex;
+  width: 100%;
+  margin: 50px 0;
+
+  &__info {
+    flex-grow: 3;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+    height: 295px;
+    margin-right: 2rem;
+
+    &__avatar {
+      width: 200px;
+      height: 200px;
+      margin: 1rem 0;
+    }
+
+    &__name {
+      background-color: $color-primary;
+      padding: 1rem;
+      color: white;
+      font-size: 20px;
+    }
+  }
+
+  &__change {
+    flex-grow: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $color-primary;
+    font-size: 20px;
+
+    &__place {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    button {
+      background-color: #1c3664;
+      height: 40px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    .bntAdmin {
+      background-color: $color-attention;
+    }
+
+    .blockAdmin {
+      margin-top: 1rem;
+    }
+  }
+}

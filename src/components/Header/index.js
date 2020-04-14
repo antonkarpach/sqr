@@ -11,6 +11,7 @@ import logoImg1 from '../img/logo-header-blue.svg'
 import userIcon from '../img/any/user.svg';
 import doorIcon from '../img/any/sign-out-alt-solid.svg';
 import {browserHistory} from "react-router";
+import HorizontalMenu from "../horizontal-menu/HorizontalMenu";
 
 class Header extends Component {
   constructor(props) {

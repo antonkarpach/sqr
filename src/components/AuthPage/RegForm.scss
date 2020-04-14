@@ -1,0 +1,38 @@
+@import "src/components/emum/variables";
+
+.RegForm {
+  width: 370px;
+
+  &__container {
+
+    form {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+
+      .RegForm__container__email {
+        padding-top: 1rem;
+      }
+
+      .RegForm__container__login {
+        padding-top: 1rem;
+      }
+
+      .RegForm__container__Password {
+        padding-top: 1rem;
+      }
+
+      .RegForm__container__Password {
+        padding-top: 1rem;
+      }
+    }
+    button {
+      margin-top: 21px;
+      background-color: #1c3664;
+      height: 40px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+    }
+  }
+}
