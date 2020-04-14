@@ -14,11 +14,60 @@
     flex-direction: column;
     width: $xl;
 
+    .Footer__header {
+      display: flex;
+      justify-content: space-between;
+
+      .FooterLogo {
+        display: block;
+        width: 240px;
+        height: 60px;
+        background: url("../img/logo-header-white.png") center center no-repeat;
+        background-size: contain;
+      }
+
+      .FooterFollowUs {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+
+        .FooterFollowUs__label {
+          margin-right: 1rem;
+        }
+
+        .FooterFollowUs__link {
+          margin-right: 1rem;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+
     .Divider {
       margin-top: 1rem;
       margin-bottom: 1rem;
       border-top: 1px solid #ced4da;
       opacity: 0.2;
     }
+
+    .Footer__text {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      line-height: 8px;
+      font-size: 14px;
+      font-family: museo-sans, sans-serif;
+    }
   }
 }
+
+
+
+

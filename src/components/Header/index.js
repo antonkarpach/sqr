@@ -49,7 +49,7 @@ class Header extends Component {
           </a>
           <div className="Header__block">
             <form action='/search' className="Header__block__search">
-              <div className="ImageIcon">
+              <div className="ImageIcon1">
                 <img src={require("../img/any/search-solid.svg")}
                      onClick={() => document.forms[0].submit()}/>
               </div>
