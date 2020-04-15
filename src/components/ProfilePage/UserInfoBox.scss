@@ -28,6 +28,7 @@
   }
 
   &__change {
+    margin-right: 2rem;
     flex-grow: 9;
     display: flex;
     justify-content: center;
@@ -39,10 +40,18 @@
     &__place {
       display: flex;
       justify-content: center;
+      align-items: start;
       flex-direction: column;
       width: 100%;
     }
 
+
+    .blockAdmin {
+      margin-top: 1rem;
+    }
+  }
+
+  &__buttons {
     button {
       background-color: #1c3664;
       height: 40px;
@@ -53,10 +62,6 @@
 
     .bntAdmin {
       background-color: $color-attention;
-    }
-
-    .blockAdmin {
-      margin-top: 1rem;
     }
   }
 }

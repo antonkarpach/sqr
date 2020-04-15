@@ -7,11 +7,10 @@ const HorizontalMenu = () => {
     <div className="HorizontalMenu">
      <Container>
        <div className="oleg">
-       <div>text</div>
-       <div>text</div>
-       <div>text</div>
-       <div>text</div>
-       <div>text</div>
+       <div>Dashboard</div>
+       <div>News</div>
+       <div>About us</div>
+       <div>Partners</div>
        </div>
      </Container>
     </div>

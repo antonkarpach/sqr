@@ -34,7 +34,9 @@ class UserInfoBox extends Component {
           <div className="UserInfoBox__change__place">{this.lang.lastName}<EditInPlace value={this.props.user.secondName || this.lang.notSpecified} name={'secondName'} onChange={this.edit}/></div>
             <div className="UserInfoBox__change__place">{this.lang.sex}<EditInPlace value={this.props.user.sex || this.lang.notSpecified} name="sex" type="select" dropDownOptions={this.lang.sexOptions} onChange={this.edit}/></div>
               <div className="UserInfoBox__change__place">{this.lang.aboutMe}<EditInPlace value={this.props.user.about || this.lang.notSpecified} type={'textarea'} name={'about'} onChange={this.edit}/></div>
-            <div><strong>{this.lang.numberOfCompanies}</strong>{this.props.numberOfCompanies}</div>
+        </div>
+        <div className="UserInfoBox__buttons">
+          <div><strong>{this.lang.numberOfCompanies}</strong>{this.props.numberOfCompanies}</div>
           <a href={`/companies/new${this.props.user.isOwner ? '' : `?${this.props.user.id}` }`}><button>{this.lang.createCompany}</button></a>
           { this.props.user.isAdmin && [<div className="blockAdmin"><strong>{this.lang.rights }</strong>{this.lang.admin}</div>, <a href="/admin"><button className="bntAdmin">{this.lang.administration}</button></a>]}
         </div>
